@@ -1,0 +1,39 @@
+ VehicleType { 
+   Abstract = true
+   ID = 407
+
+; ----------------------------------------------------------------------------------------------------------------
+; -----   S A T E L L I T E   ------------------------------------------------------------------------------------
+; ----------------------------------------------------------------------------------------------------------------
+
+
+   Infotext = []
+
+   Features = 
+   Category = light_aircraft
+   Armor = 350
+   Weight = 25
+   View = 50
+   Jamming = 0
+   MaxSurvivableStorm = 0
+   ResourceDrillingRange = 0
+   SelfRepairRate = 0
+
+   Height = ground_level orbit 
+   Tank { 
+      Energy = 0
+      Material = 0
+      fuel = 500
+   } Tank
+   FuelConsumption = 5
+   Movement = 0 0 0 20 0 0 0 30 
+   MovementSound = satellite_s.ogg
+
+   WaitForAttack = false
+
+   Construction { 
+      Buildings = 
+      Vehicles = 
+      Objects = 
+   } Construction
+} VehicleType

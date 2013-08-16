@@ -1,0 +1,10 @@
+technology {
+   Name = Spring
+   infotext = Forschungsprojekt abgeschlossen! Spring verfügbar!
+   id = 1274
+   RelatedUnitID = 1274
+   parent = 100020
+   researchpoints *= 16
+   techlevel = 4
+   TechnologiesRequired = 100020,100002,100104,100307 
+} Technology

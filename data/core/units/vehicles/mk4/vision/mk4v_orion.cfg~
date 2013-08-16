@@ -1,0 +1,29 @@
+[unit_type]
+
+    name= _ "Orion"
+    hide_help=no
+
+    id=1204
+
+    [base_unit]
+        id=242
+    [/base_unit]
+
+    description= _ "Mobile Radar"
+   
+#    Description = Radarfahrzeug
+
+    #    Picture = mk4v_orion.png
+    image=units/mk4/vision/mk4v_orion.png
+
+#    InfoImage = mk4v_orion.jpg
+
+#    wreckageobject = 14204
+
+#    Infotext = [Obwohl das Orion-System nur ueber minimale Bewaffnung verfuegt, stellt es mit seiner 
+#    ueberaus bedeutsamen Radarreichweite einen Eckpfeiler der militaerischen Strategie dar. Es 
+#    versteht sich von selbst, dass die Wichtigkeit des Systems groesstmoeglichen Schutz bedingt. 
+#    Radareinheiten sind die Augen jeder Truppe und je weiter sie sehen koennen, desto eher sind 
+#    die Reaktionen des Feindes einzuschaetzen.] 
+
+[/unit_type]

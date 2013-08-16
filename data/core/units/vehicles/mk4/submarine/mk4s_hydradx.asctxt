@@ -1,0 +1,43 @@
+VehicleType { 
+   Name = Hydra DX
+   parent = 352
+   ID = 14007
+   GuideSortHelp += 0 0 0 0 4 0 0 0 0 0
+   
+   Description = Drohnen Traeger
+   Infotext = [Im Zuge der Entwicklung der unbemannten Drohnen stellte sich heraus, dass die kampfstarken und hochspezialisierten Drohnen die Schwäche aufwiesen, nur von Startbahnen aufsteigen zu können. Aufgrund ihrer geringen Reichweite wären sie dadurch nur zum punktuellen Einsatz gelangt. Da sich eine signifikante Steigerung der Reichweite selbst bei einem drastischen Abbau der Drohnenbewaffnung nicht erreichen ließ, wurden alternative Konzepte zur Gebrauchswertsteigerung geprüft. Letztlich setzte sich der Vorschlag durch, bestehende mobile Waffensysteme so zu modifizieren, dass einzelne oder mehrere Drohnen von ihnen aus starten können. Im Rahmen des DX-Kampfwertsteigerungsprogrammes wurden die erforderlichen Modifikationen in Angriff genommen. Bei den see- und bodengestützten Abschußvorrichtungen wurde dies durch ein mit Feststofftreibpatronen betriebenes Katapapult realisiert. Bei luftgestützten Systemen wurden bestehende Bombenschächte vergrößert und mit einer nach aussen schwenkbaren Ausklinkvorrichtung versehen. Die HYDRA DX baut auf der HYDRA-Korvetten-Klasse auf und dient als seegestützter Drohnenstarter. Sie ist in der Lage, drei Drohnen zügig in ihr Einsatzgebiet auf See zu befördern und sie mittels Startkatapult starten zu lassen. In begrenztem Maße kann Sie die Drohnen auch versorgen und sogar reparieren. Um den entsprechenden Platz zu schaffen wurde die Torpedobewaffnung komplett entfernt. Ebenso ist eine U-Boot-Bekämpfung nun nicht mehr möglich. Um jedoch einen sicheren Luftraum für den Start der Drohnen gewährleisten zu können, wurden Boden-Luft-Raketen nachgerüstet. Die HYDRA DX kann so auch als Flak-/Flarakschiff verwendet werden, man sollte jedoch nie aus den Augen verlieren, daß ihr Hauptzweck im Einsatz der transportierten Drohnen besteht.   
+]
+   picture = mk4s_hydradx.png
+   wreckageobject = 14007
+   Transportation ->* VehicleType.TransDroneDestroyer 
+   Tank { 
+      Energy = 0
+      Material = 2000
+      fuel = 7000
+   } Tank
+   Features += Repair_Facility
+
+   Weapons { 
+      Number = 5
+      Weapon0 ->* VehicleType.Ship_Gun 
+      Weapon0.MaxRange = 30
+      Weapon0.Ammo = 8
+      Weapon0.Punch@MaxRange = 70
+      Weapon0.Punch@MinRange = 79
+
+      Weapon1 ->* VehicleType.smMSM 
+      Weapon1.Punch@MaxRange = 70
+      Weapon1.Punch@MinRange = 70
+      Weapon1.MaxRange = 30
+
+      Weapon2 ->* VehicleType.SAMH 
+      Weapon2.MaxRange = 30
+      Weapon2.Ammo = 20
+      
+      Weapon3 ->* VehicleType.DCS
+      Weapon3.Ammo = 20
+
+      Weapon4 ->* VehicleType.AmmoTorp
+      Weapon4.Ammo = 20
+   } Weapons
+} VehicleType

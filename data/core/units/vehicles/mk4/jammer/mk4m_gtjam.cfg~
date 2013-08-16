@@ -1,0 +1,18 @@
+[unit_type]
+    
+    name= _ "GT Jam"
+    id=14024
+    [base_unit]
+        id=306
+    [/base_unit]
+
+    image=units/mk4/jammer/mk4m_gtjam.png
+
+#    InfoImage = mk4m_gtjam.jpg
+
+#    wreckageobject = 14024
+#    Infotext = [GolemType Roboter mit Radarstöhrelektronik. ]
+
+    add_to_hitpoints=+100
+
+[/unit_type]

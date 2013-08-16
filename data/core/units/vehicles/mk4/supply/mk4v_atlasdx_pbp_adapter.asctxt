@@ -1,0 +1,5 @@
+Techadapter {
+   Name = 14020
+   ;Bezeichnung der verknüpften Technologie: Atlas DX
+   TechnologiesRequired = 14020
+} TechAdapter

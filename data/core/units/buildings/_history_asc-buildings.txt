@@ -1,0 +1,145 @@
+﻿Grafiken: GAMER,Schicksal,AndreasK,Xyphagoroszh und Grom
+Spezifikationen: GAMER
+
+BUILDINGS HISTORY
+______________________
+-MAx. Produktion Stadt, gefixt
+
+______________________
+03.04.2010 z82 (GAMER)
+Beta-10-06
+-MK4 Solarkraftwerk aktiviert
+Beta-10-04
+-Stadt + lava_barrier -100 Produktion, -1000 Energiespeicher
+______________________
+27.02.2010 z81 (GAMER)
+Beta-10-03
+Neu:
+-Windrad
+______________________
+23.01.2010 z80 (GAMER)
+Beta-10-01
+-MK4 U-BootWerft und Hafen Überarbeitet
+-Grafik Bohrturm, Spaceport_Nord überarbeitet
+______________________
+08.11.2009 z78 (GAMER)
+Beta-09-15 z77.2
+-Neuberechnung Kosten radar/Störgebäude
+______________________
+03.10.2009 z77 (GAMER)
+Beta-09-12
+-Spaceport Nord, Spielerfarben gefixt
+-Spaceport Süd, Eingang korrigiert, Spielerfarben gefixt
+__________________
+Beta-09-04
+-Tiefseefabrik eingebaut
+__________________
+10.03.2009 (Martin)
+- Farm und Lumbercamp Bild angepasst (mehr Transparenz)
+__________________
+21.09.2008 (GAMER)
+-Stadt nicht mehr durch lava zerst�rbar
+__________________
+13.09.2008 (GAMER)
+-Hafen kann kleine Ger�te bauen
+-Bugfix Eingangsystem f�r fliegende Geb�ude
+-Duell Lab10 kleiner EIngang
+- Mine nicht mehr auf railroad baubar
+__________________
+09.08.2008 (GAMER)
+-Stadt kann von default-Einheiten betreten werden
+-Hangar, anpasung Baubarkeit
+-neue Eingangsparents
+__________________
+06.07.2008 (GAMER)
+-Baubarkeit Radar/Jammer Geb�ude eingeschr�nkt
+__________________
+02.02.2008 (GAMER)
+-Trainingslager Kapazit�t auf 1000 erh�ht
+______________
+v21.01
+-Sonnenkraftwerk2 eingebaut, eingang oben
+______________
+v21 26.04.2007
+-release
+_________________
+v13.01 beta
+- "alles bau"-bug behoben
+Neu:
+-Atomkraftwerk
+-Hangar
+_________________
+v13.00 04.03.2007
+-Release
+_________________
+v12.03 beta
+-Armor erh�ht gro�/schwer= 2500 mittel=2000/1500 klein=1000
+-Stadt und HQ nicht mehr abrei�bar
+-trooper und leichte EInheiten k�nnen generell jedes Geb�ude betreten
+-Baubarkeit von Einheiten in den Fabriken spezialisiert (trooper nur noch in kleiner fabrik)
+-Stadt keine Ammo Produktion mehr
+-Stadt = 10 FP+500EMF/Runde
+_________________
+v12.02 15.07.2006
+- "default" Einheiten (PRD, Kornuta, Sonarboje), jetzt in Airport baubar.
+- gro�e Fabrik baut keine default und leichten Einheiten mehr, daf�r aber "Turrets"
+_________________
+v12.00
+-HQ funktion entfernt
+-Town 5 FP + 300EMF/RUnde + 2000EMF Speicher
+_________________
+v11.00
+-kl.Habrik kann keine hoovercrafts mehr laden
+-Eingang Trainingscenter auf 200 Erh�ht, Gesamtzuladung von 1000 auf 500 verringert.
+-Jammergeb�ude +10 Jamming 
+_________________
+v10.01 06.01.2005
+-gr. Fabrik kann keine Helicopter mehr laden
+-Werft kann keine leichten Fahrzeuge mehr herstellen
+_________________
+v10.01 26.11.2004
+-Sonderforschungszentrum f�r Einzelmissionen hinzugef�gt.
+-Stadt, Eingang auf 500 vergr��ert
+
+v10.00 01.10.2004
+-Bugfix versteckte Stadt
+-Bugfix Munitionsproduktion Stadt
+-Trainingscenter mit Munitionsproduktion.
+-Turrets nicht mehr in Fabrik baubar.
+
+v9.02 25.08.2004
+-Produktion der St�dte wiederhergestellt
+
+v9.01 20.08.2004
+-Jammer und Radargeb�ude aktualisiert
+
+v9.00 04.06.2004
+-Umstellung auf neue ASC-v1.15 Funktionen
+-Energie-Speicher allg. verringert.
+-Material+Fuel Speicherkapazit�t in allen Nicht-Depot Geb�uden verringert.
+
+v7.01 13.06.2004
+-Bugfix HQ Big
+-Bugfix Mine2
+
+v7.0 06.04.2004
+-Town Eingang vergr��ert
+-Produktions Bugfix Secret Town, Villa Deng
+-Heli-Landepad vor alle Bohrinseln
+-Alle BI Wracks aus ASC Geb�uden entfernt
+-neue BI Mine mit n�rdlichem Eingang
+-neu Energiespeicher f�r Missionskarten
+-TrainingCenter, Eingang auf 120 vergr��ert, 18 Stellpl�tze, Helicopter freigegeben
+-neues Jammergeb�ude f�r MK1
+
+v6.00 15.11.2003
+- 4 gro�e ASC H�fen hinzugef�gt.
+
+v5.00 09.09.2003
+-F�r ASC SolarPowerplant, kleine Fabrik, 2x Oilplatform hinzugef�gt.
+
+v4.00 17.08.2003
+-Geb�ude allg: k�nnen nicht mehr �ber railraod, road und runway gebaut werden. Nur noch auf freiem Untergrund.
+-AirPorts: Stellpl�tze von 4 auf 6, alle orbitalen Einheiten k�nnen gebaut werden
+-Depots: Panzerung von 1800 auf 1000, Energiespeicher auf 200 verringert, Auftanken von Schiffen m�glich
+

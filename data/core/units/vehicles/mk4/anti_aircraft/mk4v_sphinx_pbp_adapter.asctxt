@@ -1,5 +1,0 @@
-Techadapter {
-   Name = 1292
-   ;Bezeichnung der verknüpften Technologie: Sphinx
-   TechnologiesRequired = 1292
-} TechAdapter

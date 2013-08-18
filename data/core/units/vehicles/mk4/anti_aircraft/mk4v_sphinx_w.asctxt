@@ -1,8 +1,0 @@
-ObjectType { 
-   Name = Sphinx Wreckage
-   ID = 14292
-   parent = 499
-   dry { 
-      picture = mk4v_sphinx_w.png 1
-   } dry
-} ObjectType

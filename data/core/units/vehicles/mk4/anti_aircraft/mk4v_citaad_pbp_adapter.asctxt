@@ -1,5 +1,0 @@
-Techadapter {
-   Name = 14021
-   ;Bezeichnung der verknüpften Technologie: Cita AD
-   TechnologiesRequired = 14021
-} TechAdapter

@@ -1,5 +1,0 @@
-Techadapter {
-   Name = 1275
-   ;Bezeichnung der verknüpften Technologie: Menhir
-   TechnologiesRequired = 1275
-} TechAdapter

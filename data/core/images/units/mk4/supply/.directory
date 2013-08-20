@@ -1,5 +1,7 @@
 [Dolphin]
 PreviewsShown=true
-SortRole=type
-Timestamp=2013,8,15,3,31,4
+Timestamp=2013,8,20,2,33,26
 Version=3
+
+[Settings]
+HiddenFilesShown=true

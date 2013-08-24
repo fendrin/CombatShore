@@ -1,5 +1,0 @@
-Techadapter {
-   Name = 1200
-   ;Bezeichnung der verknüpften Technologie: Ranger
-   TechnologiesRequired = 1200
-} TechAdapter

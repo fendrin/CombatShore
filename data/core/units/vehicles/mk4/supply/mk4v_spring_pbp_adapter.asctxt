@@ -1,5 +1,0 @@
-Techadapter {
-   Name = 1274
-   ;Bezeichnung der verknüpften Technologie: Spring
-   TechnologiesRequired = 1274
-} TechAdapter

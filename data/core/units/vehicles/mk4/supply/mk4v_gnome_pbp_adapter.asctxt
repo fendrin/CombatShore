@@ -1,5 +1,0 @@
-Techadapter {
-   Name = 14010
-   ;Bezeichnung der verknüpften Technologie: Gnome
-   TechnologiesRequired = 14010
-} TechAdapter

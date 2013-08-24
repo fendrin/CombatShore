@@ -1,5 +1,0 @@
-Techadapter {
-   Name = 1202
-   ;Bezeichnung der verknüpften Technologie: Sinus
-   TechnologiesRequired = 1202
-} TechAdapter

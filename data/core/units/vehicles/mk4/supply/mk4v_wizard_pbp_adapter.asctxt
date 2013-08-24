@@ -1,5 +1,0 @@
-Techadapter {
-   Name = 1268
-   ;Bezeichnung der verknüpften Technologie: Wizard
-   TechnologiesRequired = 1268
-} TechAdapter

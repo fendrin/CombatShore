@@ -1,8 +1,0 @@
-ObjectType { 
-   Name = Lurat Wreckage
-   ID = 14240
-   parent = 499
-   dry { 
-      picture = mk4v_lurat_w.png 1
-   } dry
-} ObjectType

@@ -128,7 +128,7 @@ ID 14018/371 Whale          heavy transport hoovercraft
 ID  1257/350 Möwe           Schnellboot
 ID  1258/350 Patrix         Truppentransportboot
 ID  1262/355 Polar          Kreuzer
-ID  1263 357 Zenit          Schlachtschiff
+ID  1263/357 Zenit          Schlachtschiff
 ID  1264/352 Hydra          Torpedocorvette
 ID  1284/356 Fortress       heavy Cruiser
 ID  1289/367 Marauder       fast torpedo ship

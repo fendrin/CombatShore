@@ -7,7 +7,7 @@ Spezifikationen: GAMER
 --Infantrie--
 ID  1205/201 Demon          light attack trooper
 ID  1215/202 Troll          anti tank trooper
-ID  1236/207 Paratdemon     Fallschirmspringer
+ID  1236/207 Parademon      Fallschirmspringer
 ID  1237/206 Diver          tauchroboter
 
 -Mechwarrior

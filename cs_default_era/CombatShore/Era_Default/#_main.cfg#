@@ -1,0 +1,34 @@
+#textdomain CombatShore-Era_Default
+[textdomain]
+	name="CombatShore-Era_Default"
+	path="data/add-ons/CombatShore/Era_Default/translations"
+[/textdomain]
+
+#ifdef MULTIPLAYER
+
+[binary_path]
+	path=data/add-ons/CombatShore/Era_Default
+[/binary_path]
+
+{~add-ons/CombatShore/Era_Default/macros/}
+
+# wmllint: directory spelling Khalifate
+#[+units]
+	{~add-ons/CombatShore/Era_Default/units/}
+#[/units]
+
+[era]
+	id=era_CombatShore_default
+	name= _ "CombatShore Default"
+
+	{~add-ons/CombatShore/Era_Default/factions/cromos.cfg}
+[/era]
+
+# wmlscope: stop ignoring
+
+[+units]
+
+    
+
+[/units]
+#endif

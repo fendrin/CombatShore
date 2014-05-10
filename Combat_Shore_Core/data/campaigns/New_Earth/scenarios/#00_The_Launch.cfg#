@@ -1,0 +1,238 @@
+[scenario]
+
+    id=00_The_Launch
+    name= _ "The Launch"
+
+    map_data="{~add-ons/Combat_Shore_Core/data/campaigns/maps/miss00.map}"
+
+    [story]
+        [part]
+            story= _ "2110 - After searching unseccesfully in several different star systems for years the search for extrasolar life supporting planets project located the first M class (TODO M == Minchara from Star Track, maybe replace) planetoid, the moon later called 'Whatever'. Orbiting a jupiter class planet in the Lisar's Star system."
+        [/part]
+        [part]
+            story= _ "2110 - 2113 The probes discover interresting features of the other moons as well."
+        [/part]
+        [part]
+            story= _ "2115 - Shortly after each other several factions start to conquer this new worlds."
+        [/part]
+    [/story]
+
+
+#ifndef DEBUG_MODE
+    [event]
+        name=prestart
+
+        [message]
+            speaker=narrator
+            message= _ "For nearly 120 (TODO first seti project?) years mankind watched the stars in search for a signal, one sign that proves the existence of another earth. Five years ago that sign arrived, but not send by an extraterestial species but merely from one of ours. "
+        [/message]
+
+        {MESSAGE_YOU "Hello?"}
+        {MESSAGE_BOB "Hi, this is Bob."}
+        {MESSAGE_YOU "Oh, nice to hear from you. How's it going?"}
+        {MESSAGE_BOB "Fine, thanks."}
+        {MESSAGE_YOU "Good to hear. So, what've you been up to?"}
+        {MESSAGE_BOB "It's my job to find a (Better Mission Director?) Flight Director for the moon mission. Are you interrested?"}
+        {MESSAGE_YOU "I normally would. But this one sounds more like an action of war than a space flight."}
+        {MESSAGE_BOB "No doubt it is. I bet that the conflict with EvilCorp will escalade more sooner than later."}
+        {MESSAGE_YOU "You must be pretty desperade when calling me for this one."}
+        {MESSAGE_BOB "In fact I am. Not that nobody wants to take the responsability. But I fear it needs the best this time"}
+        {MESSAGE_YOU "Schmoozing me up is a little cheap, isn't it?"}
+        {MESSAGE_BOB "Maybe. But I am serious. A simple planetary landing is difficult enough and you are the only one who managed one so far."}
+        {MESSAGE_YOU "But that did not involve any military activities. I do not even know the hardware in that field"}
+        {MESSAGE_BOB "No fear. I have already collected a nice team of mission controllers. You would have your experts on everything."}
+        {MESSAGE_YOU "I still don't know."}
+        {MESSAGE_BOB "I have even managed to get Chantal into it."}
+        {MESSAGE_YOU "Now you are getting from being cheap to being unfair."}
+        {MESSAGE_NARRATOR "Bob laughs."}
+        {MESSAGE_BOB "Don't say no now. Give it a sleep and call me back. I can wait 2 days but not longer"}
+        {MESSAGE_YOU "You've wasted both our time."}
+        {MESSAGE_BOB "Fine, see ya!"}
+        {MESSAGE_YOU "Bye and good luck!"}
+
+        {MESSAGE_NARRATOR "3 days later..."}
+
+    [/event]
+#endif
+
+    [event]
+        name=start
+
+#ifndef DEBUG_MODE
+
+        {MESSAGE_NARRATOR "Today we watch the start of our first extrasolar away mission founded with public money. There is no official confirmation yet for the strong suspection of EvilCorp haveing launched a similar mission days ago."}
+
+        {MESSAGE_YOU "Mission controllers... Please give me a go or no go for launch."}
+        {MESSAGE_YOU "Booster?!"}
+        {MESSAGE_BOOSTER "Go, Flight!"}
+        {MESSAGE_YOU "EECOM?!"}
+        {MESSAGE_EECOM "All resources are loaded. Go, Flight!"}
+        {MESSAGE_RECON "Go!"}
+        {MESSAGE_YOU "COM?!"}
+        #{MESSAGE_COM "Ready to go."}
+        {MESSAGE_YOU "NETWORK."}
+        {MESSAGE_NETWORK "Go."}
+        {MESSAGE_YOU "Okay, we are ready to go."}
+        {MESSAGE_YOU "Launch Controll, we are go for launch."}
+        {MESSAGE_NARRATOR "We are go for launch. T minus 60 seconds and counting..."}
+        {MESSAGE_NARRATOR "Launch preparations are on their final phase."}
+
+        [delay]
+            time=2000
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "T minus 15" + "</span>"
+        [/floating_text]
+        [delay]
+            time=5000
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "Ten" + "</span>"
+        [/floating_text]
+        [delay]
+            time=1000
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "Nine" + "</span>"
+        [/floating_text]
+        [delay]
+            time=1000
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "Eight" + "</span>"
+        [/floating_text]
+        [delay]
+            time=1000
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "Seven" + "</span>"
+        [/floating_text]
+        [delay]
+            time=1000
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "Six" + "</span>"
+        [/floating_text]
+        [delay]
+            time=1000
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "Five" + "</span>"
+        [/floating_text]
+        [delay]
+            time=1000
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "Ignition sequence started." + "</span>"
+        [/floating_text]
+        [delay]
+            time=1000
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "Three" + "</span>"
+        [/floating_text]
+        [delay]
+            time=1000
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "Two" + "</span>"
+        [/floating_text]
+        [delay]
+            time=1000
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "One" + "</span>"
+        [/floating_text]
+        [delay]
+            time=1000
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "Zero" + "</span>"
+        [/floating_text]
+        [delay]
+            time=200
+        [/delay]
+        [floating_text]
+            x,y=8,6
+            text="<span color='#cccc33'>" + _ "Ignition" + "</span>"
+        [/floating_text]
+        [delay]
+            time=2000
+        [/delay]
+        {MESSAGE_NARRATOR "We have lift off."}
+        {MESSAGE_GUIDANCE "Target height reached beginning to orbit."}
+        {MESSAGE_YOU "Bring the jump drive online."}
+        {MESSAGE_GUIDANCE "Drive started and operational."}
+        {MESSAGE_GUIDANCE "Jump sequence initiated."}
+        {MESSAGE_NETWORK "Telemetry lost."}
+        {MESSAGE_RECON "Mass contact lost."}
+        {MESSAGE_YOU "Awaiting further contact."}
+        {MESSAGE_NETWORK "Contact established."}
+        {MESSAGE_GUIDANCE "Space Craft in place. Jump sequence was succesful."}
+        {MESSAGE_RECON "The scan shows signs of power sources. EvilCorp must have build a base on the surface already."}
+#endif
+        [message]
+            message= _ "How to proceed?"
+            [option]
+                message= _ "Let's land on their heads and take over the base. Nice of them to safe us the effort, isn't it?"
+                [command]
+                    [endlevel]
+                        result=victory
+                        next_scenario=01a_ambush
+                        carryover_report=no
+                        bonus=no
+                        linger_mode=no
+                        save=no
+                        replay_save=no
+                    [/endlevel] 
+                [/command]
+            [/option]
+            [option]
+                message= _ "Search for a quiet landing zone, the more distance between the better. We need to catch up building."
+                [command]
+                    [endlevel]
+                        result=victory
+                        next_scenario=01b_landing
+                        carryover_report=no
+                        bonus=no
+                        linger_mode=no
+                        save=no
+                        replay_save=no
+                    [/endlevel]                    
+                [/command]
+            [/option]
+        [/message]
+
+    [/event]
+
+    [side]
+        side=1
+        controller=human
+        name= _ "Val Harris"
+        canrecruit=yes
+        type=33
+        x,y=8,6
+    [/side]
+
+  #  [side]
+  #      side=2
+  #      name= _ "hmmm"
+  #      type=33
+  #      x,y=2,2
+  #  [/side]
+
+
+[/scenario]
+

@@ -1,0 +1,21 @@
+----
+-- Copyright (C) 2022 by Fabian Mueller <fendrin@gmx.de>
+-- SPDX-License-Identifier: GPL-2.0+
+
+gameName = 'CombatShore'
+
+{
+   -- lovr config values, same id
+   identity: gameName
+
+   window:
+      title: gameName
+      fullscreen: false
+      width:  1920
+      height: 1080
+
+
+   modules:
+      audio: false
+      headset: true
+}

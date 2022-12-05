@@ -1,0 +1,28 @@
+----
+-- Copyright (C) 2022 by Fabian Mueller <fendrin@gmx.de>
+-- SPDX-License-Identifier: GPL-2.0+
+
+config_file_path = 'client/config.yue'
+
+-- first read the default file from the game folder.
+conf = yue.dofile(config_file_path)
+-- then set the identity from it
+fs = lovr.filesystem
+fs.setIdentity(conf.identity, true)
+-- reload the config with identity set, enabling loading from the save directory.
+conf = yue.dofile(config_file_path)
+
+-- @TODO write about the jit bug
+jit.off! if conf.disable_jit
+
+lovr.conf = (t) ->
+
+    with t.window
+        .title = conf.window.title
+        .fullscreen = conf.window.fullscreen
+        .width = conf.window.width
+        .height = conf.window.height
+
+    with t.modules
+        .headset = conf.modules.headset
+        .audio   = conf.modules.audio

@@ -1,0 +1,15 @@
+----
+-- Copyright (C) 2022 by Fabian Mueller <fendrin@gmx.de>
+-- SPDX-License-Identifier: GPL-2.0+
+
+(paths, suffix) ->
+    search_path = ''
+
+    for i, path in ipairs(paths)
+        search_path = search_path .. path .. '?.' .. suffix .. ';'
+        search_path = search_path .. path .. '?/init.' .. suffix
+
+        if i ~= #paths then
+            search_path = search_path .. ';'
+
+    return search_path

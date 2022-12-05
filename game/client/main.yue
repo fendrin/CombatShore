@@ -1,0 +1,25 @@
+----
+-- Copyright (C) 2022 by Fabian Mueller <fendrin@gmx.de>
+-- SPDX-License-Identifier: GPL-2.0+
+
+----
+-- @file main.yue
+-- 
+
+paths =
+   * ''
+   * './'
+   * 'client/'
+   * 'shared/'
+
+genRequirePath = require'shared.genRequirePath'
+
+path_lua = genRequirePath paths, 'lua'
+path_yue = genRequirePath paths, 'yue'
+
+lovr.filesystem.setRequirePath path_lua
+yue.options.path = path_yue
+package.path = ''
+
+lovr.draw = (pass) ->
+   pass\text('Hello World', 0, 1.7, -3, .5)

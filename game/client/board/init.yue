@@ -1,0 +1,39 @@
+----
+-- Copyright (C) 2022 by Fabian Mueller <fendrin@gmx.de>
+-- SPDX-License-Identifier: GPL-2.0+
+
+import hexesInRangeOf, hexMesh, flat_hex_to_pixel, pointy_hex_to_pixel, format
+   from require'board.hex'
+
+flat = true
+
+createMap = (hexSize, mapSize) ->
+   border = 0.05
+   height = 1.5
+   meshes = {}
+
+   for hex in *hexesInRangeOf mapSize, r:0, q:0, s:0
+
+      x, z = if flat 
+         flat_hex_to_pixel hex, hexSize 
+      else pointy_hex_to_pixel hex, hexSize
+      
+      center = :x, y: 5, :z
+
+      vertices = hexMesh center, hexSize - border, height
+      mesh = lovr.graphics.newBuffer vertices, format
+      table.insert meshes, mesh
+
+   return meshes
+
+local meshes
+
+export load = ->
+   size = 0.25
+   range = 2
+   meshes = createMap size, range
+
+export draw = (pass) ->
+   pass\setColor(1, 1, 1)
+   for hex in *meshes
+      pass\mesh hex

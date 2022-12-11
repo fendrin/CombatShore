@@ -1,0 +1,136 @@
+----
+-- Copyright (C) 2022 by Fabian Mueller <fendrin@gmx.de>
+-- SPDX-License-Identifier: GPL-2.0+
+
+
+import max, min, cos, sin, pi, sqrt from math
+
+
+-- transfromations --
+export axial_to_cube = (q, r) ->
+    s = 0-q-r
+    return q, r, s
+
+
+cube_to_axial = (cube) ->
+    q = cube.q
+    r = cube.r
+    return q, r
+---------------------
+
+
+export pointy_hex_to_pixel = (hex, size) ->
+   x = size * (sqrt(3) * hex.q + sqrt(3)/2 * hex.r)
+   z = size * (                        3/2 * hex.r)
+   return x, z
+
+
+export flat_hex_to_pixel = (hex, size) ->
+   x = size * (         3.0/2  * hex.q)
+   z = size * (sqrt(3)/2 * hex.q  +  (sqrt(3) * hex.r))
+   return x, z
+
+
+export hexesInRangeOf = (range, hex) ->
+   results = {}
+   for q = -range + hex.q, range + hex.q
+      for r = max(hex.q - range, hex.q - q - range), min(hex.q + range, hex.q - q + range)
+         s = -q - r
+         table.insert(results, {:q, :r, :s})
+   return results
+
+
+export hexMesh = (center, size, height) ->
+
+   flat_hex_corner = (i) ->
+      angle_deg = 60 * i
+      angle_rad = pi / 180 * angle_deg
+      return center.x + size * cos(angle_rad), center.z + size * sin(angle_rad)
+
+   vertices = {}
+     
+   color = -> return vec4(0,1,1,1)
+   normal = (p1, p2, p3)-> 
+      --So for a triangle p1, p2, p3, if the vector A = p2 - p1 and the vector B = p3 - p1 
+      -- then the normal N = A x B and can be calculated by:
+      A =
+         x: p2.x - p1.x
+         y: p2.y - p1.y
+         z: p2.z - p2.z  
+      B = 
+         x: p3.x - p1.x
+         y: p3.y - p1.y
+         z: p3.z - p1.z
+      N = 
+         x: A.y * B.z - A.z * B.y
+         y: A.z * B.x - A.x * B.z
+         z: A.x * B.y - A.y * B.x
+
+      return vec3(N.x, N.y, N.z)
+
+   for i = 0, 5
+      x1, z1 = flat_hex_corner(i)
+      x2, z2 = flat_hex_corner((i+1)%6)
+
+      normal1 = normal({x: x1, y: 1, z: z1},{x: x2, y: 1, z: z2},{x: center.x ,y: 1,z: center.z})
+
+      table.insert(vertices, vec3(x1, 1, z1))
+      table.insert(vertices, color!)
+      table.insert(vertices, normal1)
+
+      table.insert(vertices, vec3(x2, 1, z2))
+      table.insert(vertices, color!)
+      table.insert(vertices, normal1)
+
+      table.insert(vertices, vec3(center.x, 1, center.z))
+      table.insert(vertices, color!)
+      table.insert(vertices, normal1)
+
+      normal2 = normal({x: x1,y: height,z: z1},{x: x2,y: height,z: z2},{x: center.x,y: height,z:center.z})
+
+      table.insert(vertices, vec3(x1, height, z1))
+      table.insert(vertices, color!)
+      table.insert(vertices, normal2)
+
+      table.insert(vertices, vec3(x2, height, z2))
+      table.insert(vertices, color!)
+      table.insert(vertices, normal2)
+
+      table.insert(vertices, vec3(center.x, height, center.z))
+      table.insert(vertices, color!)
+      table.insert(vertices, normal2)
+
+      normal3 = normal({x: x1,y: 1,z: z1},{x: x2,y: 1,z: z2},{x: x1,y: height,z: z1})
+
+      table.insert(vertices, vec3(x1, 1, z1))
+      table.insert(vertices, color!)
+      table.insert(vertices, normal3)
+
+      table.insert(vertices, vec3(x2, 1, z2))
+      table.insert(vertices, color!)
+      table.insert(vertices, normal3)
+
+      table.insert(vertices, vec3(x1, height, z1))
+      table.insert(vertices, color!)
+      table.insert(vertices, normal3)
+
+      normal4 = normal({x: x1,y: height,z: z1},{x: x2,y: height,z: z2},{x: x2,y: 1,z: z2})
+
+      table.insert(vertices, vec3(x1, height, z1))
+      table.insert(vertices, color!)
+      table.insert(vertices, normal4)
+
+      table.insert(vertices, vec3(x2, height, z2))
+      table.insert(vertices, color!)
+      table.insert(vertices, normal4)
+
+      table.insert(vertices, vec3(x2, 1, z2))
+      table.insert(vertices, color!)
+      table.insert(vertices, normal4)
+
+   return vertices
+
+export format =
+   * type: 'vec3', location: 'VertexPosition'
+   * type: 'vec4', location: 'VertexColor'
+   * type: 'vec3', location: 'VertexNormal'

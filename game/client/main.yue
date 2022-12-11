@@ -20,5 +20,21 @@ lovr.filesystem.setRequirePath path_lua
 yue.options.path = path_yue
 package.path = ''
 
+board = require'board'
+shading = require'cel_shading'
+
+lovr.load = ->
+   board.load!
+   shading.load!
+
 lovr.draw = (pass) ->
-   pass\text('Hello World', 0, 1.7, -3, .5)
+   -- grid
+   pass\setColor(.1, .1, .12)
+   pass\plane( 0, 0, 0, 25, 25, -math.pi / 2, 1, 0, 0 )
+   pass\setColor( .2, .2, .2 )
+   pass\plane( 0, 0, 0, 25, 25, -math.pi / 2, 1, 0, 0, 'line', 50, 50 )
+
+   pass\text 'Hello World', 0, 1.7, -3, .5
+
+   shading.draw(pass)
+   board.draw pass

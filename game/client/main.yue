@@ -22,12 +22,18 @@ package.path = ''
 
 board = require'board'
 shading = require'cel_shading'
+pointer = require'pointer'
 
 lovr.load = ->
+   pointer.load!
    board.load!
    shading.load!
 
+lovr.update = (dt) ->
+   pointer.update(dt)
+
 lovr.draw = (pass) ->
+
    -- grid
    pass\setColor(.1, .1, .12)
    pass\plane( 0, 0, 0, 25, 25, -math.pi / 2, 1, 0, 0 )
@@ -36,5 +42,6 @@ lovr.draw = (pass) ->
 
    pass\text 'Hello World', 0, 1.7, -3, .5
 
+   pointer.draw(pass)
    shading.draw(pass)
    board.draw pass

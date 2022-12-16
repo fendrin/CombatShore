@@ -1,0 +1,48 @@
+random = lovr.math.random
+boxes = {}
+selectedBox = nil
+hitpoint = lovr.math.newVec3()
+red = { 1, .5, .5 }
+green = { .5, 1, .5 }
+
+local world
+export load = ->
+    lovr.graphics.setBackgroundColor(.2, .2, .22)
+    world = lovr.physics.newWorld(0, 0, 0)
+    -- Make a bunch of random spinning boxes XD
+    for x = -3, 3
+        for z = 1, 10
+            y = .5 + lovr.math.randomNormal(.1)
+            box = world\newBoxCollider(x, y, -z, .28)
+            box\setOrientation(random(2 * math.pi), random(), random(), random())
+            box\setAngularVelocity(random(), random(), random())
+            table.insert(boxes, box)
+    
+export update = (dt) ->
+    selectedBox = nil
+    world\update(dt)
+    ox, oy, oz = lovr.headset.getPosition('hand/left/point')
+    dx, dy, dz = quat(lovr.headset.getOrientation('hand/left/point'))\direction()\mul(50)\unpack()
+    closest = math.huge
+    world\raycast(ox, oy, oz, ox + dx, oy + dy, oz + dz, (shape, x, y, z) ->
+        distance = vec3(x, y, z)\distance(vec3(ox, oy, oz))
+        if distance < closest 
+            selectedBox = shape\getCollider()
+            hitpoint\set(x, y, z)
+            closest = distance
+    )
+
+export draw = (pass) ->
+    -- Boxes
+    for box in *boxes 
+        pass\setColor(box == selectedBox and green or red)
+        pass\cube(vec3(box\getPosition()), .28, quat(box\getOrientation()))  
+    -- Dot
+    if selectedBox
+        pass\setColor(0, 0, 1)
+        pass\sphere(hitpoint, .01)
+    -- Laser pointer
+    hand = vec3(lovr.headset.getPosition('hand/left/point'))
+    direction = quat(lovr.headset.getOrientation('hand/left/point'))\direction()
+    pass\setColor(1, 1, 1)
+    pass\line(hand, selectedBox and hitpoint or (hand + direction * 50))
